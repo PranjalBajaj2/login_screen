@@ -48,9 +48,14 @@ class _login extends State<Login>{
                              children: [
                                TextField(
                                  decoration: InputDecoration(
+                                   enabledBorder: OutlineInputBorder(
+                                       borderRadius: BorderRadius.circular(10),
+                                       borderSide: BorderSide(color: Color(0xC1EDB4F4))
+                                   ),
                                    hintText: 'Email',
                                    border: OutlineInputBorder(
                                      borderRadius: BorderRadius.circular(10),
+
                                    ),
                                  ),
                                ),
@@ -60,6 +65,10 @@ class _login extends State<Login>{
                                TextField(
                                  obscureText: true,
                                  decoration: InputDecoration(
+                                   enabledBorder: OutlineInputBorder(
+                                       borderRadius: BorderRadius.circular(10),
+                                       borderSide: BorderSide(color: Color(0xC1EDB4F4))
+                                   ),
                                    hintText: 'Password',
                                    border: OutlineInputBorder(
                                      borderRadius: BorderRadius.circular(10),
@@ -68,15 +77,16 @@ class _login extends State<Login>{
                                ),
                                const SizedBox(height: 30),
                                Row(
-                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                  children: [
                                    Text('Sign In',
                                    style: TextStyle(
+                                     color: Colors.purple,
                                      fontSize: 21,
-                                     fontWeight: FontWeight.w700
+                                     fontWeight: FontWeight.w600
                                    ),),
+                                   const SizedBox(width: 10),
                                    CircleAvatar(
-                                     //radius: 10,
+                                     radius: 20,
                                      backgroundColor: Color(0xC1EDB4F4),
                                      child: IconButton(onPressed: (){},
                                          icon: Icon(Icons.arrow_forward)),
@@ -93,6 +103,7 @@ class _login extends State<Login>{
                                        },
                                        child: Text('Sign Up',
                                        style: TextStyle(
+                                         color: Colors.purple,
                                          decoration: TextDecoration.underline,
                                          fontSize: 18,
 
@@ -102,6 +113,7 @@ class _login extends State<Login>{
                                        onPressed: (){},
                                        child: Text('Forget Password',
                                          style: TextStyle(
+                                           color: Colors.purple,
                                            decoration: TextDecoration.underline,
                                            fontSize: 18,
 
